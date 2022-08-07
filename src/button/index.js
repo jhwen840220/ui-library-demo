@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
   color: #ffffff;
   border-radius: 4px;
   font-size: 14px;
@@ -14,9 +14,8 @@ const StyledButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  ${({ type }) => {
-    switch (type) {
+  ${({ level }) => {
+    switch (level) {
       case "danger":
         return `
 					background-color: #f4511e;
@@ -31,8 +30,8 @@ const StyledButton = styled.div`
     }
   }}
 `;
-const Button = ({ type, children }) => {
-  return <StyledButton type={type}>{children}</StyledButton>;
+const Button = ({ level, children }) => {
+  return <StyledButton level={level}>{children}</StyledButton>;
 };
 
 export default Button;
