@@ -38,7 +38,7 @@ const Switch = ({ onChange }) => {
     onChange && onChange(value);
   };
   return (
-    <SwitchWrapper onClick={handleChange}>
+    <SwitchWrapper checked={checked} onClick={handleChange}>
       <SwitchHandle checked={checked}></SwitchHandle>
     </SwitchWrapper>
   );

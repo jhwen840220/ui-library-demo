@@ -42,6 +42,7 @@ var Switch = function Switch(_ref3) {
   };
 
   return /*#__PURE__*/React.createElement(SwitchWrapper, {
+    checked: checked,
     onClick: handleChange
   }, /*#__PURE__*/React.createElement(SwitchHandle, {
     checked: checked
