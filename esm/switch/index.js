@@ -15,17 +15,20 @@ import styled from "styled-components";
 var SwitchWrapper = styled.button.withConfig({
   displayName: "switch__SwitchWrapper",
   componentId: "sc-ingpxs-0"
-})(["position:relative;box-sizing:border-box;border-radius:100px;width:44px;height:22px;line-height:22px;border:0;background-color:#1e9fd2;"]);
+})(["position:relative;box-sizing:border-box;border-radius:100px;width:44px;height:22px;line-height:22px;border:0;background-color:", ";"], function (_ref) {
+  var checked = _ref.checked;
+  return checked ? "#1e9fd2" : "#efefef";
+});
 var SwitchHandle = styled.div.withConfig({
   displayName: "switch__SwitchHandle",
   componentId: "sc-ingpxs-1"
-})(["position:absolute;top:2px;left:", ";width:18px;height:18px;transition:all 0.2s ease-in-out;&:before{position:absolute;content:\"\";background-color:#ffffff;border-radius:9px;inset:0;box-shadow:0 2px 4px #00230b33;transition:all 0.2s ease-in-out;}"], function (_ref) {
-  var checked = _ref.checked;
+})(["position:absolute;top:2px;left:", ";width:18px;height:18px;transition:all 0.2s ease-in-out;&:before{position:absolute;content:\"\";background-color:#ffffff;border-radius:9px;inset:0;box-shadow:0 2px 4px #00230b33;transition:all 0.2s ease-in-out;}"], function (_ref2) {
+  var checked = _ref2.checked;
   return checked ? "calc(100% - 20px)" : "2px";
 });
 
-var Switch = function Switch(_ref2) {
-  var onChange = _ref2.onChange;
+var Switch = function Switch(_ref3) {
+  var onChange = _ref3.onChange;
 
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),

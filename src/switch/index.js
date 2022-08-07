@@ -9,7 +9,7 @@ const SwitchWrapper = styled.button`
   height: 22px;
   line-height: 22px;
   border: 0;
-  background-color: #1e9fd2;
+  background-color: ${({ checked }) => (checked ? "#1e9fd2" : "#efefef")};
 `;
 
 const SwitchHandle = styled.div`

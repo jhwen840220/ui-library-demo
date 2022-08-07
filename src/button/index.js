@@ -20,12 +20,20 @@ const StyledButton = styled.button`
         return `
 					background-color: #f4511e;
 					border-color: #f4511e;
+          &:hover {
+            background-color: #a33512;
+            border-color: #a33512;
+          }
 				`;
       case "primary":
       default:
         return `
 					background-color: #1e9fd2;
 					border-color: #1e9fd2;
+          &:hover {
+            background-color: #0f7aab;
+            border-color: #0f7aab;
+          }
 				`;
     }
   }}
